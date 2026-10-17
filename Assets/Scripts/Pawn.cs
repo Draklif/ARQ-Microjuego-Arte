@@ -6,6 +6,8 @@ using UnityEngine;
 public class Pawn : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
+    [SerializeField] float acceleration = 40f;
+    [SerializeField] float deceleration = 25f;
 
     Rigidbody2D body;
     Vector2 moveDirection;
@@ -36,6 +38,9 @@ public class Pawn : MonoBehaviour
     // La física se actualiza en FixedUpdate, no en Update.
     void FixedUpdate()
     {
-        body.linearVelocity = moveDirection * speed;
+        // En vez de saltar a la velocidad objetivo, nos acercamos a ella poco a poco.
+        Vector2 targetVelocity = moveDirection * speed;
+        float rate = moveDirection == Vector2.zero ? deceleration : acceleration;
+        body.linearVelocity = Vector2.MoveTowards(body.linearVelocity, targetVelocity, rate * Time.fixedDeltaTime);
     }
 }
