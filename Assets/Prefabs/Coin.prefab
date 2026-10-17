@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fd358913c948f4f8858a41cc971cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  pickupEffect: {fileID: 6988251253297704637, guid: 87bc898b0cabd1c4fb4cb09276da7a54, type: 3}
 --- !u!1 &5887918895194235606
 GameObject:
   m_ObjectHideFlags: 0
