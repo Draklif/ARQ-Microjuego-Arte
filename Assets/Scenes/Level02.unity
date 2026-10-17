@@ -1982,6 +1982,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2107,6 +2108,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccea2a9744cfca4781d132763b255db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,6 +2955,7 @@ GameObject:
   - component: {fileID: 1150597978}
   - component: {fileID: 1150597977}
   - component: {fileID: 1150597976}
+  - component: {fileID: 1150597979}
   m_Layer: 0
   m_Name: CoinText
   m_TagString: Untagged
@@ -3068,6 +3082,20 @@ RectTransform:
   m_AnchoredPosition: {x: 40, y: -30}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1150597979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150597975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d64d4c2e527c474ea33856fec6b6196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pop
+  scale: 1.5
+  smoothing: 10
 --- !u!1001 &1250158825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5006,6 +5034,7 @@ MonoBehaviour:
   coinsToOpenDoor: 6
   door: {fileID: 715051067}
   coinText: {fileID: 1150597976}
+  coinTextPop: {fileID: 1150597979}
 --- !u!4 &1802992470
 Transform:
   m_ObjectHideFlags: 0

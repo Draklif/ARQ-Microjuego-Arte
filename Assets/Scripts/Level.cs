@@ -11,6 +11,7 @@ public class Level : MonoBehaviour
     [SerializeField] int coinsToOpenDoor = 5;
     [SerializeField] Door door;
     [SerializeField] TMP_Text coinText;
+    [SerializeField] Pop coinTextPop;
 
     int coins;
 
@@ -28,6 +29,7 @@ public class Level : MonoBehaviour
     {
         coins++;
         UpdateText();
+        coinTextPop.Play();
         if (coins == coinsToOpenDoor)
             door.Open();
     }

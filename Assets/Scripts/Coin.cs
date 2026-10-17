@@ -13,6 +13,7 @@ public class Coin : MonoBehaviour
 
         Level.Instance.AddCoin();
         Instantiate(pickupEffect, transform.position, Quaternion.identity);
+        CameraShake.Instance.Shake(0.05f, 0.1f);
         Destroy(gameObject);
     }
 }

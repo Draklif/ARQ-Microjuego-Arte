@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     public void Open()
     {
         Instantiate(openEffect, transform.position, Quaternion.identity);
+        CameraShake.Instance.Shake(0.2f, 0.3f);
         gameObject.SetActive(false);
     }
 }
