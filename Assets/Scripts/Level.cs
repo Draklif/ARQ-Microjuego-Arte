@@ -10,8 +10,13 @@ public class Level : MonoBehaviour
 
     [SerializeField] int coinsToOpenDoor = 5;
     [SerializeField] Door door;
+    [Header("UI")]
     [SerializeField] TMP_Text coinText;
-    [SerializeField] Pop coinTextPop;
+    [SerializeField] Pop counterPop;
+    [SerializeField] Toast toast;
+    [SerializeField] ScreenFader fader;
+
+    [Header("Final del nivel")]
     [SerializeField] AudioClip completeSound;
     [SerializeField] float delayBeforeNextLevel = 0.8f;
 
@@ -26,15 +31,19 @@ public class Level : MonoBehaviour
     void Start()
     {
         UpdateText();
+        toast.Show("Nivel " + (SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void AddCoin()
     {
         coins++;
         UpdateText();
-        coinTextPop.Play();
+        counterPop.Play();
         if (coins == coinsToOpenDoor)
+        {
             door.Open();
+            toast.Show("¡Puerta abierta!");
+        }
     }
 
     public void Complete()
@@ -44,7 +53,8 @@ public class Level : MonoBehaviour
         completed = true;
 
         SoundPlayer.Instance.Play(completeSound);
-        // Una pausa corta deja sonar la victoria antes de cambiar de escena.
+        fader.FadeOut();
+        // Una pausa corta deja sonar la victoria (y oscurecer la pantalla) antes de cambiar de escena.
         Invoke(nameof(LoadNextLevel), delayBeforeNextLevel);
     }
 

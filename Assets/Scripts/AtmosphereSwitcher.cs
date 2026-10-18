@@ -15,7 +15,6 @@ public class AtmosphereSwitcher : MonoBehaviour
     [SerializeField] Volume volume;
     [SerializeField] Pawn pawn;
     [SerializeField] TMP_Text coinText;
-    [SerializeField] TMP_Text label;
 
     // static: la atmósfera elegida se mantiene al pasar de nivel.
     static int current;
@@ -52,6 +51,5 @@ public class AtmosphereSwitcher : MonoBehaviour
         pawn.Speed = a.playerSpeed;
         SoundPlayer.Instance.PlayMusic(a.music, a.musicVolume);
         SoundPlayer.Instance.SetPitch(a.sfxPitch);
-        label.text = "Atmósfera: " + a.name + "   [Tab]";
     }
 }
