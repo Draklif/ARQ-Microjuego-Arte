@@ -12,8 +12,11 @@ public class Level : MonoBehaviour
     [SerializeField] Door door;
     [SerializeField] TMP_Text coinText;
     [SerializeField] Pop coinTextPop;
+    [SerializeField] AudioClip completeSound;
+    [SerializeField] float delayBeforeNextLevel = 0.8f;
 
     int coins;
+    bool completed;
 
     void Awake()
     {
@@ -35,6 +38,17 @@ public class Level : MonoBehaviour
     }
 
     public void Complete()
+    {
+        // Evita completar dos veces si el jugador vuelve a tocar la salida durante la pausa.
+        if (completed) return;
+        completed = true;
+
+        SoundPlayer.Instance.Play(completeSound);
+        // Una pausa corta deja sonar la victoria antes de cambiar de escena.
+        Invoke(nameof(LoadNextLevel), delayBeforeNextLevel);
+    }
+
+    void LoadNextLevel()
     {
         // Siguiente escena en Build Profiles; al terminar la última, vuelve a la primera.
         int next = SceneManager.GetActiveScene().buildIndex + 1;

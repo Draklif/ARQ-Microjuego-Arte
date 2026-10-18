@@ -258,3 +258,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   openEffect: {fileID: 6946209461339490499, guid: b86e667e537a4fe4baa87569c3d58d41, type: 3}
+  openSound: {fileID: 8300000, guid: 389fa8c7b39944b4da161a2d179c3769, type: 3}
