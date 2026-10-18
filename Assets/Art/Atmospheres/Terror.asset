@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c2f397e5313ed49be7e2821734c281, type: 3}
+  m_Name: Terror
+  m_EditorClassIdentifier: Assembly-CSharp::Atmosphere
+  globalLightColor: {r: 0.43137255, g: 0.47843137, b: 0.6, a: 1}
+  globalLightIntensity: 0.03
+  playerLightColor: {r: 1, g: 0.6901961, b: 0.4392157, a: 1}
+  playerLightIntensity: 1.8
+  playerLightRadius: 2.8
+  playerLightFlicker: 0.5
+  backgroundColor: {r: 0.019607844, g: 0.019607844, b: 0.02745098, a: 1}
+  postProcessing: {fileID: 11400000, guid: 9494378f6e409cb43bb0f0197038bf2f, type: 2}
+  textColor: {r: 0.5411765, g: 0.5411765, b: 0.5411765, a: 1}
+  playerSpeed: 3
+  music: {fileID: 8300000, guid: 7889e7ea55e384c488e7fa01044764d5, type: 3}
+  musicVolume: 0.8
+  sfxPitch: 0.7

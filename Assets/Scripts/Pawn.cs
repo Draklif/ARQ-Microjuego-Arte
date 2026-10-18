@@ -14,6 +14,12 @@ public class Pawn : MonoBehaviour
 
     public PlayerController Controller { get; private set; }
 
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
+
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();

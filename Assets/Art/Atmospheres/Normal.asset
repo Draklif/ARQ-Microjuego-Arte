@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c2f397e5313ed49be7e2821734c281, type: 3}
+  m_Name: Normal
+  m_EditorClassIdentifier: Assembly-CSharp::Atmosphere
+  globalLightColor: {r: 0.62352943, g: 0.7058824, b: 0.9098039, a: 1}
+  globalLightIntensity: 0.25
+  playerLightColor: {r: 1, g: 0.8862745, b: 0.72156864, a: 1}
+  playerLightIntensity: 2.2
+  playerLightRadius: 6
+  playerLightFlicker: 0
+  backgroundColor: {r: 0.105882354, g: 0.12156863, b: 0.23137255, a: 1}
+  postProcessing: {fileID: 11400000, guid: ea1e9de0673a7104facdb81f9533488e, type: 2}
+  textColor: {r: 1, g: 0.81960785, b: 0.4, a: 1}
+  playerSpeed: 5
+  music: {fileID: 0}
+  musicVolume: 0
+  sfxPitch: 1
